@@ -1,13 +1,18 @@
+import dash
 import dash_core_components as dcc
 import dash_html_components as html
 from dash.dependencies import Input, Output
 import plotly.graph_objs as go
 from django_plotly_dash import DjangoDash
+import plotly.express as px
+import pandas as pd
+from plotly.offline import iplot
+import plotly.figure_factory as ff
 
 external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 
 app = DjangoDash('SimpleExample', external_stylesheets=external_stylesheets)
-
+#app =dash.Dash()
 
 app.layout = html.Div([
     html.H1('Square Root Slider Graph'),
@@ -27,7 +32,17 @@ app.layout = html.Div([
                Output('slider-graph', 'figure'),
               [Input('slider-updatemode', 'value')])
 def display_value(value):
-
+#     gender = ["gender0","gender1"]
+#     gender_df = pd.DataFrame()
+#     count =[]
+#     mounth =[]
+#     gender0 = EDAData.objects.values_list('gender').filter(date='2018/10/31', gender='0').count()
+#     gender1 = EDAData.objects.values_list('gender').filter(date='2018/10/31', gender='1').count()
+#     count.append(gender0)
+#     count.append(gender1)
+#     gender_df["gender"]=gender
+#     gender_df["count"]=count
+        
 
     x = []
     for i in range(value):
