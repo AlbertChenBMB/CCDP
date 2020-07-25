@@ -42,10 +42,10 @@ def show(request):
         genderDataFrame["count"] = count
 
         print(genderDataFrame)
-        fig = px.bar(genderDataFrame, x="date", y="count", color="gender", barmode="group", title='性別圖')
+        fig = px.bar(genderDataFrame, x="gender", y="count", color="date", barmode="group", title='性別圖')
         plot_div = plot(fig, output_type='div', include_plotlyjs=False)
         return plot_div
-
+    
     context ={
         'plot1': scatter()
     }
