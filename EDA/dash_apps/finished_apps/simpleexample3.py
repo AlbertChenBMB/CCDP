@@ -71,11 +71,11 @@ app.layout = html.Div([
 
 def update_figure(selected_date):
     newdate=dataDate[selected_date][0]
-    print(newdate)
+    #print(newdate)
     filtered_df = genderDataFrame[genderDataFrame.date==newdate]
-    print()
-    print(selected_date)
-    print(filtered_df.date)
+    # print()
+    # print(selected_date)
+    # print(filtered_df.date)
     fig = px.bar(filtered_df, x="gender", y="count", color="genderCD4", barmode="group", title='CD4性別分布圖')
 
     fig.update_layout(transition_duration=100)
