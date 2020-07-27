@@ -58,7 +58,7 @@ app.layout = html.Div([
         min =0,
         max=len(dataDate)-1,
         marks={i: dataDate[i][0] for i in range(len(dataDate))},
-        value=len(dataDate)-1,
+        value=0,
         
         
     )
